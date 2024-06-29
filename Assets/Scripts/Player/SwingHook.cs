@@ -19,7 +19,7 @@ public class SwingHook : MonoBehaviour
 
 
 
-    private float MaxSwingDistance = 50f;
+    public float MaxSwingDistance = 50f;
     private Vector3 SwingPoint;
     private SpringJoint Joint;
 
