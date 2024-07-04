@@ -4,50 +4,67 @@ using UnityEngine;
 
 public class PlayerWithoutMovement : MonoBehaviour
 {
-    public CharacterController controller;
-
-    public float speed = 10f;
-    public float gravity = -5f;
-
     
 
-    
-    public float groundDistance = 0.4f;
-    public LayerMask groundMask;
+    public float MoveSpeed = 4f;
+   
 
-    Vector3 velocity;
-    
+    public Transform orientation;
+
+    float horizontalInput;
+    float verticalInput;
+
+    Vector3 moveDirection;
+
+    public Rigidbody rb;
+
+    public float AirMultiplier = 0.4f;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        MyInput();
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        //SpeedControl();
 
-        Vector3 move = transform.right * x + transform.forward * z;
-
-        controller.Move(move * speed * Time.deltaTime);
-
-        
-
-
-        
-
-
-        velocity.y += gravity * Time.deltaTime;
-
-        controller.Move(velocity * Time.deltaTime);
     }
 
+    private void FixedUpdate()
+    {
+        MovePlayer();
+    }
+
+    private void MyInput()
+    {
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
+    }
+
+    private void MovePlayer()
+    {
+        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+
+        rb.AddForce(moveDirection.normalized * MoveSpeed * 2f * AirMultiplier, ForceMode.Force);
+    }
+
+    private void SpeedControl()
+    {
+        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+
+        // limit velocity if needed
+        if (flatVel.magnitude > MoveSpeed)
+        {
+            Vector3 limitedVel = flatVel.normalized * MoveSpeed;
+            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+        }
+    }
 
 }

@@ -58,7 +58,7 @@ public class PullHook : MonoBehaviour
             Cable.SetPosition(0,GrappleTip.position);
 
 
-        float ReachedPullHookPoint = 30f;
+        float ReachedPullHookPoint = 40f;
 
         if (Vector3.Distance(transform.position, PullPoint) <= ReachedPullHookPoint)
         {
@@ -99,7 +99,7 @@ public class PullHook : MonoBehaviour
     {
         Vector3 PullHookDirection = (PullPoint - transform.position).normalized;
 
-        float PullHookSpeed = 40f;
+        float PullHookSpeed = 60f;
 
         PlayerRB.useGravity = false;
 
