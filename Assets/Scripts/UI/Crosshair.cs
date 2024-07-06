@@ -57,6 +57,7 @@ public class Crosshair : MonoBehaviour
             PullCrosshair.color = OutofRange;
         }
 
+        //Debug.DrawRay(Camera.position, Camera.forward, Color.black);
 
     }
 }

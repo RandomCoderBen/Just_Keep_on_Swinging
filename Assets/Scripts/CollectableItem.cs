@@ -22,15 +22,18 @@ public class CollectableItem : MonoBehaviour
         transform.Rotate(0f, 0f, 20f * Time.deltaTime, Space.Self);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider c)
     {
-        Debug.Log("Coin Collected");
 
-        this.gameManager.UpdateScore(1);
-        this.gameObject.SetActive(false);
+        if (c.gameObject.name == "Player")
+        {
+            Debug.Log("Coin Collected");
 
-        Destroy(gameObject);
+            this.gameManager.UpdateScore(1);
+            //this.gameObject.SetActive(false);
 
+            Destroy(gameObject);
+        }
         
 
     }

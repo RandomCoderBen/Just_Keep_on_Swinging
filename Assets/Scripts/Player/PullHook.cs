@@ -31,7 +31,10 @@ public class PullHook : MonoBehaviour
 
 
 
+
     //public CharacterController CharControl;
+
+    // || yield return new WaitForSeconds(5.0f)
 
 
 
@@ -45,6 +48,9 @@ public class PullHook : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(PullPress)) StartPullHook();
+
+
+
         //if (Input.GetKeyUp(PullPress)) StopPullHook();
 
         if (PullCooldownTimer > 0)
@@ -58,9 +64,9 @@ public class PullHook : MonoBehaviour
             Cable.SetPosition(0,GrappleTip.position);
 
 
-        float ReachedPullHookPoint = 40f;
+        float ReachedPullHookPoint = 45f;
 
-        if (Vector3.Distance(transform.position, PullPoint) <= ReachedPullHookPoint)
+        if (Vector3.Distance(transform.position, PullPoint) <= ReachedPullHookPoint ) 
         {
             StopPullHook();
         }

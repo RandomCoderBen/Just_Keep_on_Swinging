@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     private int score = 0;
     public TextMeshProUGUI scoreText;
 
-    public GameObject GateCover;
+    
 
     
 
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 
         if (score >= 6)  // Once all coins have been collected this code gets triggered.
         {
-            Destroy(GateCover);
+            
         }
     }
 

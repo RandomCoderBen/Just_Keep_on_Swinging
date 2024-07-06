@@ -5,7 +5,10 @@ using UnityEngine.Events;
 
 // This code is just to set a delay between collecting all collectables and resetting the level.
 public static class WaitCode
-{ 
+{
+
+    //   this.Wait(3f, () => { ;});
+
     public static void Wait (this MonoBehaviour mono, float delay, UnityAction action)
     { mono.StartCoroutine (ExacuteAction (delay, action)); }
 
