@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ExitPortal : MonoBehaviour
 {
+
+    public GameObject WinScreen;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +27,8 @@ public class ExitPortal : MonoBehaviour
 
         if (c.gameObject.name == "Player")
         {
-            SceneManager.LoadScene(Application.loadedLevel);
+            Time.timeScale = 0;
+            WinScreen.SetActive(true);
         }
     }
 }
