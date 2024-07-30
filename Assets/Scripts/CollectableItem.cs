@@ -6,14 +6,15 @@ public class CollectableItem : MonoBehaviour
 {
 
     public int points = 0;
-    protected GameManager gameManager;
+    
+    protected Level1Stats StatTracker;
 
     
 
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();  
+        StatTracker = GameObject.Find("Game Manager").GetComponent<Level1Stats>();  
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class CollectableItem : MonoBehaviour
         {
             Debug.Log("Coin Collected");
 
-            this.gameManager.UpdateScore(1);
+            this.StatTracker.UpdateScore(1);
             //this.gameObject.SetActive(false);
 
             Destroy(gameObject);

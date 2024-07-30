@@ -35,6 +35,31 @@ void ShowWin()
         SceneManager.LoadScene(Application.loadedLevel);  // Code set to the side to be acessed by the pause menu button to reload the level.
     }
 
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void Level1()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void Level2()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void Level3()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
 
     public void StartMenu()
     {

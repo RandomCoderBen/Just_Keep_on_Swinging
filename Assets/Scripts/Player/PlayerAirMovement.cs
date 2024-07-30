@@ -8,7 +8,7 @@ public class PlayerAirMovement : MonoBehaviour
     public Rigidbody PlayerRB;
 
 
-    public float MoveSpeed = 10f;
+    public float MoveSpeed = 11f;
 
 
     public Transform orientation;
@@ -25,7 +25,7 @@ public class PlayerAirMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         MyInput();
         MovePlayer();
@@ -43,6 +43,6 @@ public class PlayerAirMovement : MonoBehaviour
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        PlayerRB.AddForce(moveDirection.normalized * MoveSpeed * 0.1f, ForceMode.Force);
+        PlayerRB.AddForce(moveDirection.normalized * MoveSpeed * 0.3f, ForceMode.Force);
     }
 }

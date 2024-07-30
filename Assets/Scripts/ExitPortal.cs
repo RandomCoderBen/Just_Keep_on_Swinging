@@ -8,6 +8,10 @@ public class ExitPortal : MonoBehaviour
 
     public GameObject WinScreen;
 
+    public bool LevelFinish = false;
+
+    
+
 
 
     // Start is called before the first frame update
@@ -27,8 +31,11 @@ public class ExitPortal : MonoBehaviour
 
         if (c.gameObject.name == "Player")
         {
+            LevelFinish = true;
+
             Time.timeScale = 0;
             WinScreen.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }
