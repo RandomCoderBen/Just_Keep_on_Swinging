@@ -10,8 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29e3a56950a387140b761f99fc625d97, type: 3}
-  m_Name: New Level 1 Tracker
+  m_Name: Stat Tracker
   m_EditorClassIdentifier: 
-  TimeWin: 0
-  CoinWin: 0
-  ChallangeWin: 0
+  TotalStars: 0
+  GYMBesttime: 1100
+  LV1Besttime: 1100
+  LV1TimeWin: 0
+  LV1CoinWin: 0
+  LV1ChallangeWin: 0
+  LV2Besttime: 1100
+  LV2TimeWin: 0
+  LV2CoinWin: 0
+  LV2ChallangeWin: 0
+  LV3Besttime: 1100
+  LV3TimeWin: 0
+  LV3CoinWin: 0
+  LV3ChallangeWin: 0

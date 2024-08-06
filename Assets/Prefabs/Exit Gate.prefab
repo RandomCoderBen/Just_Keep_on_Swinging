@@ -234,7 +234,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 1, z: 1}
+  m_Size: {x: 10, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &853777877217918461
 Rigidbody:
@@ -264,6 +264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd68f0fcabd14064481deb07cef9cf64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WinScreen: {fileID: 0}
+  LevelFinish: 0
 --- !u!1 &4492756310802261696
 GameObject:
   m_ObjectHideFlags: 0

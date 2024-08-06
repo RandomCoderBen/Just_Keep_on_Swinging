@@ -3,14 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
-using TMPro;
-using UnityEngine.XR;
-using UnityEngine.SceneManagement;
 
-public class Level1Stats : MonoBehaviour
+public class GYMStats : MonoBehaviour
 {
-
     public ExitPortal ExitEnd;
 
 
@@ -24,7 +19,7 @@ public class Level1Stats : MonoBehaviour
 
 
 
-    public static Level1Stats instence;
+    public static GYMStats instence;
 
     public TextMeshProUGUI TimeCounter;
 
@@ -41,11 +36,6 @@ public class Level1Stats : MonoBehaviour
 
 
 
-    public GameObject TimeStar;
-
-    public GameObject CoinStar;
-
-    public GameObject ChallangeStar;
 
 
     private void Awake()
@@ -75,33 +65,6 @@ public class Level1Stats : MonoBehaviour
 
 
 
-        if (StatTracker.LV1TimeWin == true)
-        {
-            TimeStar.SetActive(true);
-        }
-        else
-        {
-            TimeStar.SetActive(false);
-        }
-
-        if (StatTracker.LV1CoinWin == true)
-        {
-            CoinStar.SetActive(true);
-        }
-        else
-        {
-            CoinStar.SetActive(false);
-        }
-
-        if (StatTracker.LV1ChallangeWin == true)
-        {
-            ChallangeStar.SetActive(true);
-        }
-        else
-        {
-            ChallangeStar.SetActive(false);
-        }
-
 
 
         if (ExitEnd.LevelFinish == true)
@@ -120,9 +83,7 @@ public class Level1Stats : MonoBehaviour
 
         if (score == 1)   // Once all coins have been collected this code gets triggered.  && ExitEnd.LevelFinish == true
         {
-            StatTracker.LV1CoinWin = true;
 
-            //UpdateStarCount(1);
         }
     }
 
@@ -146,15 +107,14 @@ public class Level1Stats : MonoBehaviour
 
         if (FinalTime <= 100)
         {
-            StatTracker.LV1TimeWin = true;
 
             //UpdateStarCount(1);
 
         }
 
-        if (FinalTime < StatTracker.LV1Besttime)
+        if (FinalTime < StatTracker.GYMBesttime)
         {
-            StatTracker.LV1Besttime = FinalTime;
+            StatTracker.GYMBesttime = FinalTime;
         }
 
     }
@@ -179,6 +139,4 @@ public class Level1Stats : MonoBehaviour
     {
         StatTracker.TotalStars += increment;
     }
-
-
 }

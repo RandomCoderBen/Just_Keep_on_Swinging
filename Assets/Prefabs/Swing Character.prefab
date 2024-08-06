@@ -156,7 +156,7 @@ MonoBehaviour:
   GrapplePoint:
     serializedVersion: 2
     m_Bits: 8192
-  MaxSwingDistance: 70
+  MaxSwingDistance: 100
 --- !u!114 &5152583295185336306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   GrapplePoint:
     serializedVersion: 2
     m_Bits: 8192
-  MaxPullDistance: 100
+  MaxPullDistance: 110
   PullDelayTime: 0.1
   PullCooldown: 5
   PlayerRB: {fileID: 5152583295185336317}
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerRB: {fileID: 5152583295185336317}
-  MoveSpeed: 8
+  MoveSpeed: 9
   orientation: {fileID: 5152583295185336308}
 --- !u!114 &1210468772
 MonoBehaviour:
@@ -225,8 +225,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 5152583296833003247}
-  SwingHookRange: 70
-  PullHookRange: 100
+  SwingHookRange: 100
+  PullHookRange: 110
   SwingCrosshair: {fileID: 0}
   PullCrosshair: {fileID: 0}
   GrapplePoint:
@@ -923,5 +923,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da0a917db69799448376d14c53fd16a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 190
+  mouseSensitivity: 200
   playerBody: {fileID: 5152583295185336308}

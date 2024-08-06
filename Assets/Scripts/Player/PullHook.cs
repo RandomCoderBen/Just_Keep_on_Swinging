@@ -105,7 +105,7 @@ public class PullHook : MonoBehaviour
     {
         Vector3 PullHookDirection = (PullPoint - transform.position).normalized;
 
-        float PullHookSpeed = 60f;
+        float PullHookSpeed = 50f;
 
         PlayerRB.useGravity = false;
 
