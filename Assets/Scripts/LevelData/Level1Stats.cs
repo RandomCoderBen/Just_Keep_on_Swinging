@@ -111,22 +111,18 @@ public class Level1Stats : MonoBehaviour
 
 
 
-        if (FinalTime <= 100)
-        {
-            StatTracker.TimeWin = true;
         }
-
-
-    }
 
 
     public void UpdateScore(int increment)
     {
         this.score += increment;
 
-        if (score == 1)  // Once all coins have been collected this code gets triggered.  && ExitEnd.LevelFinish == true
+        if (score == 1)   // Once all coins have been collected this code gets triggered.  && ExitEnd.LevelFinish == true
         {
-            StatTracker.CoinWin = true;
+            StatTracker.LV1CoinWin = true;
+
+            //UpdateStarCount(1);
         }
     }
 
@@ -147,6 +143,20 @@ public class Level1Stats : MonoBehaviour
         timerGoing = false;
 
         FinalTime = elapsedTime;
+
+        if (FinalTime <= 100)
+        {
+            StatTracker.LV1TimeWin = true;
+
+            //UpdateStarCount(1);
+
+        }
+
+        if (FinalTime < StatTracker.LV1Besttime)
+        {
+            StatTracker.LV1Besttime = FinalTime;
+        }
+
     }
 
     private IEnumerator UpdateTimer()
