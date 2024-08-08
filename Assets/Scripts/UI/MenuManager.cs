@@ -11,6 +11,8 @@ public class MenuManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject gameOverMenu;
 
+    public GameObject fadeEffect;
+
     void Start()
     {
         //Timer.instence.BeginTimer();  // Activates Timer code upon level start.
@@ -40,17 +42,19 @@ void ShowWin()
         SceneManager.LoadScene(0);
     }
 
-    public void Level1()
+    public void Hub()
     {
-        SceneManager.LoadScene(1);
+        fadeEffect.SetActive(true);
+
+        this.Wait(1.3f, () => { SceneManager.LoadScene(3); });
     }
 
-    public void Level2()
+    public void Level1()
     {
         SceneManager.LoadScene(2);
     }
 
-    public void Level3()
+    public void Level2()
     {
         SceneManager.LoadScene(3);
     }

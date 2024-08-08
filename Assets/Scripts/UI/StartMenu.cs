@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour
 {
 
+    public GameObject fadeEffect;
+
     //public GameObject Instructions;
     //public GameObject LevelSelect;
     public GameObject canvas;
@@ -23,7 +25,12 @@ public class StartMenu : MonoBehaviour
 
     public void StartLevel1()
     {
-        SceneManager.LoadScene(1);
+        fadeEffect.SetActive(true);
+
+
+        this.Wait(1.3f, () => { SceneManager.LoadScene(1);});
+
+       
     }
 
     public void StartLevel2()

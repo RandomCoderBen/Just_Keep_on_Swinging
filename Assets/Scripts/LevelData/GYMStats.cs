@@ -48,7 +48,9 @@ public class GYMStats : MonoBehaviour
         TimeCounter.text = "00:00";
         timerGoing = false;
 
-        BeginTimer();
+        this.Wait(1f, () => { BeginTimer(); });
+
+   
 
         FinalTimeDisplay.text = "00:00.00";
 

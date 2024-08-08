@@ -5,12 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class GYMPortal : MonoBehaviour
 {
+    public GameObject fadeEffect;
+
     public void OnTriggerEnter(Collider c)
     {
 
         if (c.gameObject.name == "Player")
         {
-            SceneManager.LoadScene(2);
+            fadeEffect.SetActive(true);
+
+            this.Wait(1.3f, () => { SceneManager.LoadScene(2); });
         }
     }
 }

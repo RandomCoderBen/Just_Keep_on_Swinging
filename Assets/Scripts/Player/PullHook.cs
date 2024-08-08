@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PullHook : MonoBehaviour
 {
@@ -64,12 +65,15 @@ public class PullHook : MonoBehaviour
             Cable.SetPosition(0,GrappleTip.position);
 
 
-        float ReachedPullHookPoint = 45f;
 
-        if (Vector3.Distance(transform.position, PullPoint) <= ReachedPullHookPoint ) 
-        {
-            StopPullHook();
-        }
+        //float ReachedPullHookPoint = 45f;
+
+        
+
+        //if (Vector3.Distance(transform.position, PullPoint) <= ReachedPullHookPoint ) 
+        //{
+        //StopPullHook();
+        //}
     }
 
 
@@ -105,14 +109,14 @@ public class PullHook : MonoBehaviour
     {
         Vector3 PullHookDirection = (PullPoint - transform.position).normalized;
 
-        float PullHookSpeed = 50f;
+        float PullHookSpeed = 45f;
 
         PlayerRB.useGravity = false;
 
         PlayerRB.AddForce((PullPoint - transform.position).normalized * PullHookSpeed, ForceMode.VelocityChange);
 
+        this.Wait(1f, () => { StopPullHook(); });
 
-        
     }
 
 
