@@ -33,6 +33,8 @@ public class GYMStats : MonoBehaviour
 
     public TextMeshProUGUI FinalTimeDisplay;
 
+    public TextMeshProUGUI BestTime;
+
 
 
 
@@ -53,6 +55,8 @@ public class GYMStats : MonoBehaviour
    
 
         FinalTimeDisplay.text = "00:00.00";
+
+        this.BestTime.text = String.Format("{00:00.00}", StatTracker.GYMBesttime);
 
 
         //CoinStar = GameObject.FindGameObjectWithTag("Level1CoinStar");

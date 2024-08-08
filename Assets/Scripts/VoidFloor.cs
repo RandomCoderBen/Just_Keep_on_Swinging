@@ -11,6 +11,9 @@ public class VoidFloor : MonoBehaviour
 
     public Rigidbody PlayerRB;
 
+
+    public PlayerCamera Cam;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,8 @@ public class VoidFloor : MonoBehaviour
             player.position = destination.position;
 
             playerG.SetActive(true);
+
+            Cam.ResetReader();
 
             PlayerRB.velocity = Vector3.zero;
 

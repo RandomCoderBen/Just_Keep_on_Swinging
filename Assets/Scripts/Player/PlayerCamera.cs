@@ -14,6 +14,13 @@ public class PlayerCamera : MonoBehaviour
 
     public ParticleSystem SpeedLines;
 
+    public Camera PlayerCam;
+
+    protected float StartFOV = 60f;
+
+    protected float MaxFOV = 70f;
+
+    protected float t = 0.5f;
 
     void Start()
     {
@@ -40,16 +47,16 @@ public class PlayerCamera : MonoBehaviour
 
         if (PlayerSpeed >= 40)
         {
-            
+            PlayerCam.fieldOfView = Mathf.Lerp(PlayerCam.fieldOfView, MaxFOV, t);
         }
         else
         {
-            
+            PlayerCam.fieldOfView = Mathf.Lerp(PlayerCam.fieldOfView, StartFOV, t);
         }
 
 
 
-        if (PlayerSpeed >= 80)
+        if (PlayerSpeed >= 75)
         {
             SpeedLines.Play();
         }
@@ -57,6 +64,7 @@ public class PlayerCamera : MonoBehaviour
         {
             SpeedLines.Stop();
         }
+
 
     }
 
@@ -75,5 +83,14 @@ public class PlayerCamera : MonoBehaviour
             PlayerSpeed = Mathf.RoundToInt(Vector3.Distance(transform.position, prevPos) / Time.fixedDeltaTime);
         }
     }
+
+
+public void ResetReader()
+    {
+        StopCoroutine(SpeedReader());
+
+        this.Wait(0.5f, () => { StartCoroutine(SpeedReader()); });
+    }
+
 
 }

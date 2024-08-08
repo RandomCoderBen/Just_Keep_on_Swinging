@@ -38,6 +38,8 @@ public class Level1Stats : MonoBehaviour
 
     public TextMeshProUGUI FinalTimeDisplay;
 
+    public TextMeshProUGUI BestTime;
+
 
 
 
@@ -58,9 +60,11 @@ public class Level1Stats : MonoBehaviour
         TimeCounter.text = "00:00";
         timerGoing = false;
 
-        BeginTimer();
+        this.Wait(1f, () => { BeginTimer(); });
 
         FinalTimeDisplay.text = "00:00.00";
+
+        this.BestTime.text = String.Format("{00:00.00}", StatTracker.LV1Besttime);
 
 
         //CoinStar = GameObject.FindGameObjectWithTag("Level1CoinStar");

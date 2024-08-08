@@ -50,7 +50,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -5738,3 +5738,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 200
   playerBody: {fileID: 5152583295185336308}
+  PlayerSpeed: 0
+  SpeedLines: {fileID: 547545347363821413}
+  PlayerCam: {fileID: 5152583296833003245}
