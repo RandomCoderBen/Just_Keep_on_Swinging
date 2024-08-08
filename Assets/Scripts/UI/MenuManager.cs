@@ -46,7 +46,7 @@ void ShowWin()
     {
         fadeEffect.SetActive(true);
 
-        this.Wait(1.3f, () => { SceneManager.LoadScene(3); });
+        this.Wait(1.3f, () => { SceneManager.LoadScene(1); });
     }
 
     public void Level1()

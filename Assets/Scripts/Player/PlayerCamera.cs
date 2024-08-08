@@ -56,7 +56,7 @@ public class PlayerCamera : MonoBehaviour
 
 
 
-        if (PlayerSpeed >= 75)
+        if (PlayerSpeed >= 70)
         {
             SpeedLines.Play();
         }
