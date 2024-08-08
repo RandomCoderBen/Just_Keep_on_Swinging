@@ -12,12 +12,17 @@ public class PlayerCamera : MonoBehaviour
 
     public float PlayerSpeed;
 
+    public ParticleSystem SpeedLines;
+
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
 
+        SpeedLines.Stop();
+
         StartCoroutine(SpeedReader());
+
     }
 
     void Update()
@@ -30,6 +35,29 @@ public class PlayerCamera : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
+
+
+
+        if (PlayerSpeed >= 40)
+        {
+            
+        }
+        else
+        {
+            
+        }
+
+
+
+        if (PlayerSpeed >= 80)
+        {
+            SpeedLines.Play();
+        }
+        else
+        {
+            SpeedLines.Stop();
+        }
+
     }
 
 

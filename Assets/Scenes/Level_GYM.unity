@@ -387,7 +387,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh61864
+  m_Name: pb_Mesh23858
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1960,13 +1960,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396842785}
   m_CullTransparentMesh: 1
+--- !u!198 &403853216 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 547545347363821413, guid: 1b9b3183e16890c4fb97d10a14f46ae0, type: 3}
+  m_PrefabInstance: {fileID: 5152583296122912359}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &449403182
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh61410
+  m_Name: pb_Mesh23384
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6357,7 +6362,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh61466
+  m_Name: pb_Mesh23452
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7096,7 +7101,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh61402
+  m_Name: pb_Mesh23376
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7620,7 +7625,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh45180
+  m_Name: pb_Mesh23692
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9381,6 +9386,10 @@ PrefabInstance:
       value: Swing Character
       objectReference: {fileID: 0}
     - target: {fileID: 5152583295185336317, guid: 1b9b3183e16890c4fb97d10a14f46ae0, type: 3}
+      propertyPath: m_Drag
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 5152583295185336317, guid: 1b9b3183e16890c4fb97d10a14f46ae0, type: 3}
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
@@ -9388,6 +9397,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5152583296833003244, guid: 1b9b3183e16890c4fb97d10a14f46ae0, type: 3}
+      propertyPath: SpeedLines
+      value: 
+      objectReference: {fileID: 403853216}
     - target: {fileID: 5152583296833003244, guid: 1b9b3183e16890c4fb97d10a14f46ae0, type: 3}
       propertyPath: mouseSensitivity
       value: 170
