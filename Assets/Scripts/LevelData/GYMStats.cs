@@ -50,7 +50,7 @@ public class GYMStats : MonoBehaviour
         TimeCounter.text = "00:00";
         timerGoing = false;
 
-        this.Wait(1f, () => { BeginTimer(); });
+        this.Wait(4.5f, () => { BeginTimer(); });
 
    
 

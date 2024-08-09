@@ -60,7 +60,7 @@ public class Level1Stats : MonoBehaviour
         TimeCounter.text = "00:00";
         timerGoing = false;
 
-        this.Wait(1f, () => { BeginTimer(); });
+        this.Wait(4.5f, () => { BeginTimer(); });
 
         FinalTimeDisplay.text = "00:00.00";
 
