@@ -24,11 +24,13 @@ public class PullHook : MonoBehaviour
     
 
     public float PullCooldown;
-    private float PullCooldownTimer;
+    public float PullCooldownTimer;
 
     private bool Hooked;
 
     public Rigidbody PlayerRB;
+
+    public int PullCount = 0;
 
 
 
@@ -101,6 +103,7 @@ public class PullHook : MonoBehaviour
         Cable.enabled = true;
         Cable.SetPosition(1,PullPoint);
 
+        this.UpdatePullcount(1);
 
     }
 
@@ -132,13 +135,13 @@ public class PullHook : MonoBehaviour
     }
 
 
-
-  
-
-
-  
-
-    
+    public void UpdatePullcount(int increment)
+    {
+        this.PullCount += increment;
 
 
-}
+    }
+
+
+
+ }

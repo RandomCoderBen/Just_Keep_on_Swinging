@@ -2962,6 +2962,7 @@ MonoBehaviour:
   TimeCounter: {fileID: 453129740}
   FinalTimeDisplay: {fileID: 570195768}
   BestTime: {fileID: 840568522}
+  BestTimeDisplay: {fileID: 0}
 --- !u!114 &684282734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3262,6 +3263,10 @@ PrefabInstance:
     - target: {fileID: 6191888460489246525, guid: 68c56c0670133a14196e4ce4532c8add, type: 3}
       propertyPath: m_Name
       value: Collectable (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191888460489246525, guid: 68c56c0670133a14196e4ce4532c8add, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68c56c0670133a14196e4ce4532c8add, type: 3}
@@ -8912,6 +8917,10 @@ PrefabInstance:
     - target: {fileID: 6191888460489246525, guid: 68c56c0670133a14196e4ce4532c8add, type: 3}
       propertyPath: m_Name
       value: Collectable
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191888460489246525, guid: 68c56c0670133a14196e4ce4532c8add, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68c56c0670133a14196e4ce4532c8add, type: 3}

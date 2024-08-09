@@ -40,6 +40,14 @@ public class Level1Stats : MonoBehaviour
 
     public TextMeshProUGUI BestTime;
 
+    public GameObject BestTimeDisplay;
+
+    private float HideTime = 1000;
+
+
+
+    public PullHook Pull;
+
 
 
 
@@ -62,9 +70,10 @@ public class Level1Stats : MonoBehaviour
 
         this.Wait(4.5f, () => { BeginTimer(); });
 
-        FinalTimeDisplay.text = "00:00.00";
+        FinalTimeDisplay.text = "00:00";
 
         this.BestTime.text = String.Format("{00:00.00}", StatTracker.LV1Besttime);
+
 
 
         //CoinStar = GameObject.FindGameObjectWithTag("Level1CoinStar");
@@ -75,7 +84,7 @@ public class Level1Stats : MonoBehaviour
 
     void Update()
     {
-        this.scoreText.text = String.Format("{0}/1", score);
+        this.scoreText.text = String.Format("{0}/4", score);
 
 
 
@@ -111,9 +120,10 @@ public class Level1Stats : MonoBehaviour
         if (ExitEnd.LevelFinish == true)
         {
             EndTimer();
+
         }
 
-
+        CheckBestTime();
 
     }
 
@@ -148,7 +158,7 @@ public class Level1Stats : MonoBehaviour
 
         FinalTime = elapsedTime;
 
-        if (FinalTime <= 100)
+        if (FinalTime <= 50)
         {
             StatTracker.LV1TimeWin = true;
 
@@ -160,6 +170,15 @@ public class Level1Stats : MonoBehaviour
         {
             StatTracker.LV1Besttime = FinalTime;
         }
+
+        
+
+        this.Wait(1.3f, () => { CheckBestTime(); });
+
+        //this.Wait(1.3f, () => { CheckChallange(); });
+
+        CheckChallange();
+
 
     }
 
@@ -182,6 +201,33 @@ public class Level1Stats : MonoBehaviour
     public void UpdateStarCount(int increment)
     {
         StatTracker.TotalStars += increment;
+    }
+
+
+    public void CheckBestTime()
+    {
+        if (StatTracker.LV1Besttime <= HideTime)
+        {
+            BestTimeDisplay.SetActive(true);
+        }
+        else
+        {
+            BestTimeDisplay.SetActive(false);
+        }
+    }
+
+
+
+    public void CheckChallange()
+    {
+        if (Pull.PullCount >=1)
+        {
+
+        }
+        else
+        {
+            StatTracker.LV1ChallangeWin = true;
+        }
     }
 
 

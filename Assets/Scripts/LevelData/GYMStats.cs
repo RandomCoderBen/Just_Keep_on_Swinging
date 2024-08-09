@@ -35,9 +35,11 @@ public class GYMStats : MonoBehaviour
 
     public TextMeshProUGUI BestTime;
 
+    public GameObject BestTimeDisplay;
 
 
 
+    private float HideTime = 1000;
 
 
     private void Awake()
@@ -57,6 +59,8 @@ public class GYMStats : MonoBehaviour
         FinalTimeDisplay.text = "00:00.00";
 
         this.BestTime.text = String.Format("{00:00.00}", StatTracker.GYMBesttime);
+
+        CheckBestTime();
 
 
         //CoinStar = GameObject.FindGameObjectWithTag("Level1CoinStar");
@@ -145,4 +149,18 @@ public class GYMStats : MonoBehaviour
     {
         StatTracker.TotalStars += increment;
     }
+
+
+    public void CheckBestTime()
+    {
+        if (StatTracker.GYMBesttime <= HideTime)
+        {
+            BestTimeDisplay.SetActive(true);
+        }
+        else
+        {
+            BestTimeDisplay.SetActive(false);
+        }
+    }
+
 }
