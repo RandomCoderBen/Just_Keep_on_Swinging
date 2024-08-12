@@ -116,6 +116,8 @@ public class PullHook : MonoBehaviour
 
         PlayerRB.useGravity = false;
 
+        PlayerRB.mass = 0.2f;
+
         PlayerRB.AddForce((PullPoint - transform.position).normalized * PullHookSpeed, ForceMode.VelocityChange);
 
         this.Wait(1f, () => { StopPullHook(); });
@@ -128,6 +130,8 @@ public class PullHook : MonoBehaviour
         Hooked = false;
 
         PlayerRB.useGravity = true;
+
+        PlayerRB.mass = 0.6f;
 
         PullCooldownTimer = PullCooldown;
 

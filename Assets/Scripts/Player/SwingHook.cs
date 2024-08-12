@@ -23,6 +23,7 @@ public class SwingHook : MonoBehaviour
     private Vector3 SwingPoint;
     private SpringJoint Joint;
 
+    public Rigidbody PlayerRB;
 
 
 
@@ -69,6 +70,8 @@ public class SwingHook : MonoBehaviour
             Cable.positionCount = 2;
             currentGrapplePosition = GrappleTip.position;
 
+            PlayerRB.mass = 0.4f;
+
         }
     }
 
@@ -76,6 +79,8 @@ public class SwingHook : MonoBehaviour
     {
         Cable.positionCount = 0;
         Destroy(Joint);
+
+        PlayerRB.mass = 0.6f;
     }
 
     void DrawCable()

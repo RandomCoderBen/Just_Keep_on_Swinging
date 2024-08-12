@@ -5067,6 +5067,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8192
   MaxSwingDistance: 100
+  PlayerRB: {fileID: 5152583295185336317}
 --- !u!114 &5152583295185336306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5122,7 +5123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerRB: {fileID: 5152583295185336317}
-  MoveSpeed: 13
+  MoveSpeed: 15
   orientation: {fileID: 5152583295185336308}
 --- !u!114 &1210468772
 MonoBehaviour:
