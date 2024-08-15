@@ -12,7 +12,6 @@ using UnityEngine.SceneManagement;
 public class Level2Stats : MonoBehaviour
 {
 
-
     public ExitPortal ExitEnd;
 
 
@@ -42,6 +41,14 @@ public class Level2Stats : MonoBehaviour
 
     public TextMeshProUGUI BestTime;
 
+    public GameObject BestTimeDisplay;
+
+    private float HideTime = 1000;
+
+
+
+    public PullHook Pull;
+
 
 
 
@@ -64,9 +71,10 @@ public class Level2Stats : MonoBehaviour
 
         this.Wait(4.5f, () => { BeginTimer(); });
 
-        FinalTimeDisplay.text = "00:00.00";
+        FinalTimeDisplay.text = "00:00";
 
         this.BestTime.text = String.Format("{00:00.00}", StatTracker.LV2Besttime);
+
 
 
         //CoinStar = GameObject.FindGameObjectWithTag("Level1CoinStar");
@@ -77,7 +85,7 @@ public class Level2Stats : MonoBehaviour
 
     void Update()
     {
-        this.scoreText.text = String.Format("{0}/1", score);
+        this.scoreText.text = String.Format("{0}/4", score);
 
 
 
@@ -113,9 +121,10 @@ public class Level2Stats : MonoBehaviour
         if (ExitEnd.LevelFinish == true)
         {
             EndTimer();
+
         }
 
-
+        CheckBestTime();
 
     }
 
@@ -150,7 +159,7 @@ public class Level2Stats : MonoBehaviour
 
         FinalTime = elapsedTime;
 
-        if (FinalTime <= 100)
+        if (FinalTime <= 50)
         {
             StatTracker.LV2TimeWin = true;
 
@@ -162,6 +171,15 @@ public class Level2Stats : MonoBehaviour
         {
             StatTracker.LV2Besttime = FinalTime;
         }
+
+
+
+        this.Wait(1.3f, () => { CheckBestTime(); });
+
+        //this.Wait(1.3f, () => { CheckChallange(); });
+
+        CheckChallange();
+
 
     }
 
@@ -184,6 +202,33 @@ public class Level2Stats : MonoBehaviour
     public void UpdateStarCount(int increment)
     {
         StatTracker.TotalStars += increment;
+    }
+
+
+    public void CheckBestTime()
+    {
+        if (StatTracker.LV2Besttime <= HideTime)
+        {
+            BestTimeDisplay.SetActive(true);
+        }
+        else
+        {
+            BestTimeDisplay.SetActive(false);
+        }
+    }
+
+
+
+    public void CheckChallange()
+    {
+        if (Pull.PullCount >= 1)
+        {
+
+        }
+        else
+        {
+            StatTracker.LV2ChallangeWin = true;
+        }
     }
 
 

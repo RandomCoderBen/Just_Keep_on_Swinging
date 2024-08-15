@@ -22,6 +22,8 @@ public class GameStart : MonoBehaviour
 
         Player.GetComponent<PlayerAirMovement>().enabled = false;
         Camera.GetComponent<PlayerCamera>().enabled = false;
+        Player.GetComponent<PullHook>().enabled = false;
+        Player.GetComponent<SwingHook>().enabled = false;
 
         PlayerRB.useGravity = false;
 
@@ -47,6 +49,10 @@ public class GameStart : MonoBehaviour
 
 
         Player.GetComponent<PlayerAirMovement>().enabled = true;
+
+        Player.GetComponent<PullHook>().enabled = true;
+
+        Player.GetComponent<SwingHook>().enabled = true;
 
         PlayerRB.useGravity = true;
 
