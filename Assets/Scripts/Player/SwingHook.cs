@@ -25,6 +25,8 @@ public class SwingHook : MonoBehaviour
 
     public Rigidbody PlayerRB;
 
+    public GameObject Hook;
+
 
 
     void Start()
@@ -72,6 +74,8 @@ public class SwingHook : MonoBehaviour
 
             PlayerRB.mass = 0.4f;
 
+            Hook.SetActive(false);
+
         }
     }
 
@@ -81,6 +85,8 @@ public class SwingHook : MonoBehaviour
         Destroy(Joint);
 
         PlayerRB.mass = 0.6f;
+
+        Hook.SetActive(true);
     }
 
     void DrawCable()

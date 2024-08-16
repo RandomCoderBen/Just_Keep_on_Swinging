@@ -132,7 +132,7 @@ public class Level1Stats : MonoBehaviour
     {
         this.score += increment;
 
-        if (score == 1)   // Once all coins have been collected this code gets triggered.  && ExitEnd.LevelFinish == true
+        if (score == 4)   // Once all coins have been collected this code gets triggered.  && ExitEnd.LevelFinish == true
         {
             StatTracker.LV1CoinWin = true;
 

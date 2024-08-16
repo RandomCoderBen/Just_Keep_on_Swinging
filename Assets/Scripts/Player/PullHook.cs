@@ -33,6 +33,9 @@ public class PullHook : MonoBehaviour
     public int PullCount = 0;
 
 
+    public GameObject Hook;
+
+
 
 
     //public CharacterController CharControl;
@@ -103,6 +106,10 @@ public class PullHook : MonoBehaviour
         Cable.enabled = true;
         Cable.SetPosition(1,PullPoint);
 
+
+        Hook.SetActive(false);
+
+
         this.UpdatePullcount(1);
 
     }
@@ -136,6 +143,8 @@ public class PullHook : MonoBehaviour
         PullCooldownTimer = PullCooldown;
 
         Cable.enabled = false;
+
+        Hook.SetActive(true);
     }
 
 

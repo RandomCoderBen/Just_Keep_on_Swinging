@@ -12,12 +12,12 @@ public class ThrowPlayer : MonoBehaviour
 
     public float LaunchSpeed = 90f;
 
-
+    public ParticleSystem BoostLines;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        BoostLines.Play();
     }
 
     // Update is called once per frame
@@ -45,7 +45,9 @@ public class ThrowPlayer : MonoBehaviour
 
         PlayerRB.useGravity = false;
 
-        PlayerRB.mass = 0.1f;
+        PlayerRB.mass = 0.2f;
+
+        PlayerRB.angularDrag = 10f;
 
         PlayerRB.AddForce(transform.forward * LaunchSpeed, ForceMode.VelocityChange);
 
@@ -59,6 +61,9 @@ public class ThrowPlayer : MonoBehaviour
         PlayerRB.useGravity = true;
 
         PlayerRB.mass = 0.6f;
+
+        PlayerRB.angularDrag = 0f;
+
     }
 
 
