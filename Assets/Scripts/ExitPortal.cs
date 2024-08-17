@@ -10,7 +10,10 @@ public class ExitPortal : MonoBehaviour
 
     public bool LevelFinish = false;
 
-    
+    [SerializeField]
+    AudioSource WinAudio;
+
+
 
 
 
@@ -36,6 +39,8 @@ public class ExitPortal : MonoBehaviour
             Time.timeScale = 0;
             WinScreen.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
+
+            WinAudio.Play();
         }
     }
 }

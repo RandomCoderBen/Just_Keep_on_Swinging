@@ -27,6 +27,10 @@ public class SwingHook : MonoBehaviour
 
     public GameObject Hook;
 
+    [SerializeField]
+    AudioSource ShootAudio;
+
+
 
 
     void Start()
@@ -76,10 +80,12 @@ public class SwingHook : MonoBehaviour
 
             Hook.SetActive(false);
 
+            ShootAudio.Play();
+
         }
     }
 
-    private void StopSwing()
+    public void StopSwing()
     {
         Cable.positionCount = 0;
         Destroy(Joint);

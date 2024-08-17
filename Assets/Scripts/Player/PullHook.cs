@@ -35,6 +35,11 @@ public class PullHook : MonoBehaviour
 
     public GameObject Hook;
 
+    [SerializeField]
+    AudioSource ShootAudio;
+
+
+
 
 
 
@@ -111,6 +116,8 @@ public class PullHook : MonoBehaviour
 
 
         this.UpdatePullcount(1);
+
+        ShootAudio.Play();
 
     }
 

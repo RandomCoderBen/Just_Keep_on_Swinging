@@ -536,6 +536,7 @@ MonoBehaviour:
   playerG: {fileID: 1210468753}
   PlayerRB: {fileID: 1210468762}
   Cam: {fileID: 5152583296122912360}
+  Swing: {fileID: 0}
 --- !u!54 &84754405
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -696,6 +697,7 @@ MonoBehaviour:
   playerG: {fileID: 1210468753}
   PlayerRB: {fileID: 1210468762}
   Cam: {fileID: 5152583296122912360}
+  Swing: {fileID: 0}
 --- !u!54 &87965160
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1443,6 +1445,7 @@ MonoBehaviour:
   playerG: {fileID: 1210468753}
   PlayerRB: {fileID: 1210468762}
   Cam: {fileID: 5152583296122912360}
+  Swing: {fileID: 0}
 --- !u!54 &372394074
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4232,6 +4235,7 @@ MonoBehaviour:
   playerG: {fileID: 1210468753}
   PlayerRB: {fileID: 1210468762}
   Cam: {fileID: 5152583296122912360}
+  Swing: {fileID: 0}
 --- !u!54 &1282408804
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6648,6 +6652,7 @@ MonoBehaviour:
   playerG: {fileID: 1210468753}
   PlayerRB: {fileID: 1210468762}
   Cam: {fileID: 5152583296122912360}
+  Swing: {fileID: 0}
 --- !u!54 &1940071196
 Rigidbody:
   m_ObjectHideFlags: 0

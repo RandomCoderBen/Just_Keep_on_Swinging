@@ -9,7 +9,10 @@ public class CollectableItem : MonoBehaviour
     
     protected Level1Stats StatTracker;
 
-    
+    [SerializeField]
+    AudioSource PickupAudio;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,10 +31,14 @@ public class CollectableItem : MonoBehaviour
 
         if (c.gameObject.name == "Player")
         {
+            PickupAudio.Play();
+
             Debug.Log("Coin Collected");
 
             this.StatTracker.UpdateScore(1);
             //this.gameObject.SetActive(false);
+
+         
 
             Destroy(gameObject);
         }

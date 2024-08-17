@@ -14,6 +14,8 @@ public class VoidFloor : MonoBehaviour
 
     public PlayerCamera Cam;
 
+    public SwingHook Swing;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,8 @@ public class VoidFloor : MonoBehaviour
 
         if (c.gameObject.name == "Player")  
         {
+            Swing.StopSwing();
+
             playerG.SetActive(false);
 
             player.position = destination.position;

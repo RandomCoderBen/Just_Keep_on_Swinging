@@ -3029,7 +3029,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 1.3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &605784507966230923
 Rigidbody:
@@ -3064,6 +3064,7 @@ MonoBehaviour:
   playerG: {fileID: 0}
   PlayerRB: {fileID: 0}
   Cam: {fileID: 0}
+  Swing: {fileID: 0}
 --- !u!1 &605784507990220077
 GameObject:
   m_ObjectHideFlags: 0

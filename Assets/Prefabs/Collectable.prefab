@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 0
+  PickupAudio: {fileID: 0}
 --- !u!54 &6191888460489246524
 Rigidbody:
   m_ObjectHideFlags: 0

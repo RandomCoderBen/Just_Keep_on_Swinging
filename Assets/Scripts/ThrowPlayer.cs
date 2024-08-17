@@ -14,6 +14,13 @@ public class ThrowPlayer : MonoBehaviour
 
     public ParticleSystem BoostLines;
 
+
+    public SwingHook Swing;
+
+    [SerializeField]
+    AudioSource ThrowAudio;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +39,11 @@ public class ThrowPlayer : MonoBehaviour
 
         if (c.gameObject.name == "Player")
         {
+            Swing.StopSwing();
+
             LaunchPlayer();
+
+            ThrowAudio.Play();
         }
 
 
